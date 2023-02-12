@@ -1,15 +1,15 @@
 
 
-function Emploee (EmploeeID , FullName ,Department , Level ,ImageURL ,Salary){
+function Emploee(EmploeeID, FullName, Department, Level, ImageURL, Salary) {
 
-this.NumberID = EmploeeID
-this.Name = FullName
-this.Department = Department
-this.Level =Level
-this.imgUrl =ImageURL
-this.Salary = Salary
-this.netSalary = Salary - (Salary *(7.5/100))
-Emploee.fullInfo.push(this)
+  this.NumberID = EmploeeID
+  this.Name = FullName
+  this.Department = Department
+  this.Level = Level
+  this.imgUrl = ImageURL
+  this.Salary = Salary
+  this.netSalary = Salary - (Salary * (7.5 / 100))
+  Emploee.fullInfo.push(this)
 }
 
 Emploee.fullInfo = []
@@ -74,19 +74,19 @@ let employees = [{
 }
 ]
 
-for(let i=0; i< employees.length; i++){
+for (let i = 0; i < employees.length; i++) {
   let obj = employees[i];
   let salary;
-  switch(obj.Level) {
+  switch (obj.Level) {
     case "Senior":
       salary = getRandomNumber(1500, 2000);
       break;
     case "Mid-Senior":
       salary = getRandomNumber(1000, 1500);
-      break; 
+      break;
     case "Junior":
       salary = getRandomNumber(500, 1000);
-      break;           
+      break;
   }
 
   let employee = new Emploee(obj.id, obj.fullName, obj.Department, obj.Level, obj.imgUrl, salary);
@@ -96,19 +96,18 @@ for(let i=0; i< employees.length; i++){
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
-  
+
 }
-  
+
+
 
 
 let a = document.getElementById("par")
 
 
-for(let i =0 ; i <Emploee.fullInfo.length ;i++){
+for (let i = 0; i < Emploee.fullInfo.length; i++) {
 
-
-
-c = document.createElement("p")
+  c = document.createElement("p")
 
   c.innerHTML = ` Name is : ${Emploee.fullInfo[i].Name} & the salary is : ${Emploee.fullInfo[i].Salary} `
 
@@ -117,10 +116,10 @@ c = document.createElement("p")
 
 
 
-Emploee.prototype.newInformintion = function(){
+// Emploee.prototype.newInformintion = function(){
 
-  document.write ( `<p> Name is : ${employee.Name} & the salary is : ${employee.Salary} </p>`)
-}
+//   document.write ( `<p> Name is : ${employee.Name} & the salary is : ${employee.Salary} </p>`)
+// }
 
 
 
