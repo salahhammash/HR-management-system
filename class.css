@@ -15,12 +15,11 @@ body {
     /* margin: auto; */
     padding: 10px 40px; 
     text-indent: 30px;
+    /* font-size: 20px; */
 
 
 }
-nav :hover {
-    
-} 
+ 
 
 .footer{
      display: flex;
@@ -45,3 +44,50 @@ position: relative;
     justify-content: space-between;
     font-size: 20px;
 }
+
+.name{
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sub{
+
+background-color: rgb(123, 223, 123);
+border-radius: 50px;
+}
+.sub :hover{
+    cursor: pointer;
+}
+
+/* 
+.sec{
+    display: flex;
+
+justify-content: space-around;
+
+
+background-color: rgb(122, 78, 78);
+/* box-shadow: 20px ; */
+
+/* } */
+
+li{
+    list-style: none;
+}
+
+.lii{
+
+    display: flex;
+
+}
+
+.imgg{
+display: flex;
+flex-direction: column;
+border-radius: 20px;
+align-items: center;
+    background-color: rgb(232, 111, 111);
+margin: 50px;
+    /* padding: 10px; */
+}
+
