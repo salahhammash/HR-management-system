@@ -26,6 +26,10 @@ const sumNums = (arr) => {
 
 function avarSalery(arr){
    
+if (sumNums() == 0){
+    return 0
+}
+
     return sumNums()/arr.length ;
 
 }
@@ -117,6 +121,13 @@ if(newArr[i].Department ==="Administration" ){
 
     let avaAD = totalsalaryAd/numberOfEmpAd
 
+    //Number.isNaN(avg)
+
+    if (Number.isNaN(avaAD))
+    {
+        avaAD = 0
+    }
+
     const Administration = document.createElement("tr")
     NewTable.appendChild(Administration)
 
@@ -150,6 +161,11 @@ if(newArr[i].Department ==="Administration" ){
 
 let avaMa = totalsalaryMa/numberOfEmpMA
     
+if (Number.isNaN(avaMa))
+{
+    avaMa = 0
+}
+
 
     const Marketing = document.createElement("tr")
     NewTable.appendChild(Marketing)
@@ -180,7 +196,10 @@ let avaMa = totalsalaryMa/numberOfEmpMA
 
     //devlopment
     let avaDe = totalsalarydv/numberOfEmpdv
-
+    if (Number.isNaN(avaDe))
+    {
+        avaDe = 0
+    }
     const devlo = document.createElement("tr")
     NewTable.appendChild(devlo)
 
@@ -207,7 +226,10 @@ let avaMa = totalsalaryMa/numberOfEmpMA
     //finance
 
     let avafi= totalsalaryfi/numberOfEmpfi
-
+    if (Number.isNaN(avafi))
+    {
+        avafi = 0
+    }
     const Finance = document.createElement("tr")
     NewTable.appendChild(Finance)
 
@@ -248,12 +270,13 @@ let avaMa = totalsalaryMa/numberOfEmpMA
 
     const Total3 = document.createElement("td")
     Total.appendChild(Total3)
-    Total3.textContent = (numberOfEmpAd + numberOfEmpMA +numberOfEmpdv +numberOfEmpfi)
+    Total3.textContent = (numberOfEmpAd + numberOfEmpMA + numberOfEmpdv + numberOfEmpfi)
+    
 
 
     const Total4 = document.createElement("td")
     Total.appendChild(Total4)
-    Total4.textContent = (avaAD + avaMa +avaDe +avafi)
+    Total4.textContent = (avaAD + avaMa +avaDe +avafi)/newArr.length
 
     const Total5 = document.createElement("td")
     Total.appendChild(Total5)
